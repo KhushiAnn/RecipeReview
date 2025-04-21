@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './components/button.css';
+@import './custom-utilities.css';
+
+/* Global styles that Tailwind doesn't cover or overrides */
+body {
+  font-family: 'Roboto', sans-serif; /* Example: Using a custom font */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Example of styling for a globally used component that needs more than utilities */
+.card {
+  @apply bg-white rounded-lg shadow-md overflow-hidden;
+}
+
+.card-header {
+  @apply px-4 py-2 bg-gray-100 border-b border-gray-200;
+}
+
+.card-body {
+  @apply p-4;
+}
+
+/* You might also add animations or keyframes here if needed */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}

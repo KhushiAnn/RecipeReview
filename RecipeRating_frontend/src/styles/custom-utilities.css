@@ -1,0 +1,26 @@
+/* styles/custom-utilities.css */
+
+@layer utilities {
+    .truncate-multiline-2 {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+  
+    .center-content {
+      @apply flex justify-center items-center;
+    }
+  
+    .fill-parent {
+      width: 100%;
+      height: 100%;
+    }
+  
+    /* Example for a custom text gradient */
+    .text-gradient-blue-purple {
+      background: linear-gradient(to right, #3b82f6, #9f7aea);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
